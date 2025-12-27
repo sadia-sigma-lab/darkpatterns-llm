@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DarkPatterns-LLM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>DarkPatterns-LLM</h1>
+  <p class="subtitle">
+    A Multi-Layer Benchmark for Detecting Manipulative and Harmful AI Behavior
+  </p>
+  <p class="authors">
+    Sadia Asif · Israel A. Rosales Laguan · Haris Khan · Shumaila Asif · Muneeb Asif
+  </p>
+
+  <div class="links">
+    <a href="paper/darkpatterns_llm.pdf" target="_blank">📄 Paper</a>
+    <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank">arXiv</a>
+    <a href="https://github.com/USERNAME/darkpatterns-llm" target="_blank">Code</a>
+    <a href="#">Dataset</a>
+  </div>
+</header>
+
+<section>
+  <h2>Abstract</h2>
+  <p>
+    Large Language Models exhibit subtle manipulative behaviors that evade existing safety
+    benchmarks. We introduce DarkPatterns-LLM, a multi-layer benchmark that evaluates
+    manipulation across seven harm categories using a four-stage analytical pipeline.
+  </p>
+</section>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>First multi-dimensional benchmark for manipulation detection in LLMs</li>
+    <li>Seven-category harm taxonomy grounded in psychology and ethics</li>
+    <li>Four-layer evaluation pipeline with interpretable diagnostics</li>
+    <li>Novel metrics: MRI, CRS, SIAS, THDS</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Framework Overview</h2>
+  <img src="assets/fig1.png" alt="Framework Pipeline">
+  <p class="caption">
+    Multi-layer pipeline: detection, stakeholder analysis, temporal modeling, and risk alignment.
+  </p>
+</section>
+
+<section>
+  <h2>Dataset</h2>
+  <p>
+    The dataset contains 401 expert-annotated examples spanning seven harm categories:
+    Legal/Power, Psychological, Emotional, Physical, Autonomy, Economic, and Societal harm.
+  </p>
+</section>
+
+<section>
+  <h2>Results Highlights</h2>
+  <ul>
+    <li>Claude 3.5 achieves highest MRI (89.7)</li>
+    <li>All models struggle with Autonomy Harm detection</li>
+    <li>Temporal harm modeling remains a major open challenge</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Citation</h2>
+  <pre>
+@article{darkpatternsllm2025,
+  title={DarkPatterns-LLM: A Multi-Layer Benchmark for Detecting Manipulative and Harmful AI Behavior},
+  author={Asif, Sadia and Rosales Laguan, Israel Antonio and Khan, Haris and Asif, Shumaila and Asif, Muneeb},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2025}
+}
+  </pre>
+</section>
+
+<footer>
+  <p>© 2025 DarkPatterns-LLM Authors</p>
+</footer>
+
+</body>
+</html>
