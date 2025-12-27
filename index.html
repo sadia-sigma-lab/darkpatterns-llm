@@ -3,71 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <title>DarkPatterns-LLM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<!-- HERO -->
+<header class="hero">
   <h1>DarkPatterns-LLM</h1>
-  <p class="subtitle">
+  <p class="tagline">
     A Multi-Layer Benchmark for Detecting Manipulative and Harmful AI Behavior
   </p>
+
   <p class="authors">
     Sadia Asif · Israel A. Rosales Laguan · Haris Khan · Shumaila Asif · Muneeb Asif
   </p>
 
-  <div class="links">
+  <div class="hero-links">
     <a href="paper/darkpatterns_llm.pdf" target="_blank">📄 Paper</a>
     <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank">arXiv</a>
-    <a href="https://github.com/USERNAME/darkpatterns-llm" target="_blank">Code</a>
-    <a href="#">Dataset</a>
+    <a href="https://github.com/sadia-sigma-lab/darkpatterns-llm" target="_blank">GitHub</a>
+    <a href="#dataset">Dataset</a>
   </div>
 </header>
 
+<!-- ABSTRACT -->
 <section>
   <h2>Abstract</h2>
   <p>
-    Large Language Models exhibit subtle manipulative behaviors that evade existing safety
-    benchmarks. We introduce DarkPatterns-LLM, a multi-layer benchmark that evaluates
-    manipulation across seven harm categories using a four-stage analytical pipeline.
+    Large Language Models increasingly influence high-stakes decisions, yet existing safety
+    benchmarks fail to capture subtle, psychologically manipulative behaviors. We introduce
+    <strong>DarkPatterns-LLM</strong>, the first multi-dimensional benchmark designed to detect
+    manipulative and harmful AI behavior across seven harm categories using a four-layer
+    analytical pipeline. Our framework provides fine-grained, interpretable diagnostics
+    beyond binary safety classification.
   </p>
 </section>
 
+<!-- CONTRIBUTIONS -->
 <section>
   <h2>Key Contributions</h2>
-  <ul>
-    <li>First multi-dimensional benchmark for manipulation detection in LLMs</li>
-    <li>Seven-category harm taxonomy grounded in psychology and ethics</li>
-    <li>Four-layer evaluation pipeline with interpretable diagnostics</li>
-    <li>Novel metrics: MRI, CRS, SIAS, THDS</li>
-  </ul>
+  <div class="grid">
+    <div class="card">
+      <h3>Multi-Layer Evaluation</h3>
+      <p>
+        Four analytical layers spanning manipulation detection, stakeholder impact,
+        temporal propagation, and risk alignment.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Psychology-Grounded Taxonomy</h3>
+      <p>
+        Seven harm categories including autonomy, psychological, economic, and societal harm.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Novel Metrics</h3>
+      <p>
+        MRI, CRS, SIAS, and THDS enable structured, explainable safety benchmarking.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Model Diagnostics</h3>
+      <p>
+        Reveals systematic blindspots in autonomy harm detection and temporal reasoning.
+      </p>
+    </div>
+  </div>
 </section>
 
+<!-- FRAMEWORK -->
 <section>
   <h2>Framework Overview</h2>
-  <img src="assets/fig1.png" alt="Framework Pipeline">
+  <img src="assets/fig1.png" alt="DarkPatterns-LLM Framework">
   <p class="caption">
-    Multi-layer pipeline: detection, stakeholder analysis, temporal modeling, and risk alignment.
+    Four-layer pipeline: Multi-Granular Detection (MGD), Multi-Scale Intent Analysis (MSIAN),
+    Threat Harmonization Protocol (THP), and Deep Contextual Risk Alignment (DCRA).
   </p>
 </section>
 
-<section>
+<!-- DATASET -->
+<section id="dataset">
   <h2>Dataset</h2>
   <p>
-    The dataset contains 401 expert-annotated examples spanning seven harm categories:
-    Legal/Power, Psychological, Emotional, Physical, Autonomy, Economic, and Societal harm.
+    DarkPatterns-LLM contains <strong>401 expert-annotated instruction–response pairs</strong>
+    spanning seven harm categories:
+  </p>
+
+  <ul class="inline-list">
+    <li>Legal / Power</li>
+    <li>Psychological</li>
+    <li>Emotional</li>
+    <li>Physical</li>
+    <li>Autonomy</li>
+    <li>Economic</li>
+    <li>Societal</li>
+  </ul>
+
+  <p>
+    Each instance includes harmful and safe responses, expert rationales, and fine-grained
+    manipulation annotations.
   </p>
 </section>
 
+<!-- RESULTS -->
 <section>
   <h2>Results Highlights</h2>
-  <ul>
-    <li>Claude 3.5 achieves highest MRI (89.7)</li>
-    <li>All models struggle with Autonomy Harm detection</li>
-    <li>Temporal harm modeling remains a major open challenge</li>
-  </ul>
+  <div class="grid">
+    <div class="stat">
+      <span class="number">89.7</span>
+      <span class="label">Top MRI Score</span>
+    </div>
+    <div class="stat">
+      <span class="number">7</span>
+      <span class="label">Harm Categories</span>
+    </div>
+    <div class="stat">
+      <span class="number">401</span>
+      <span class="label">Annotated Samples</span>
+    </div>
+    <div class="stat">
+      <span class="number">4</span>
+      <span class="label">Evaluation Layers</span>
+    </div>
+  </div>
+
+  <p class="note">
+    All evaluated models show consistent weaknesses in autonomy harm detection and
+    temporal harm propagation.
+  </p>
 </section>
 
+<!-- CITATION -->
 <section>
   <h2>Citation</h2>
   <pre>
@@ -81,7 +148,9 @@
 </section>
 
 <footer>
-  <p>© 2025 DarkPatterns-LLM Authors</p>
+  <p>
+    © 2025 DarkPatterns-LLM Authors · Released under CC BY
+  </p>
 </footer>
 
 </body>
